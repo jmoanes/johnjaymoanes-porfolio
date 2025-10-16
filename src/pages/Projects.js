@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../styles/Projects.css';
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -59,8 +70,13 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
+          {projects.map((project, index) => (
+            <motion.div 
+              key={project.id} 
+              className="project-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className="project-image">
                 <span className="project-emoji">{project.image}</span>
               </div>
@@ -98,7 +114,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
