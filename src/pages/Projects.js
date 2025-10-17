@@ -16,49 +16,41 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Website",
-      description: "A fully responsive e-commerce platform built with React and modern CSS. Features include product catalog, shopping cart, and user authentication.",
-      techStack: ["React", "CSS3", "JavaScript", "Local Storage"],
-      liveDemo: "https://example.com",
-      github: "https://github.com/example/ecommerce",
-      image: "🛒"
+      title: "Employee Directory",
+      description: "A professional, responsive Employee Directory web application built with React.js, featuring a modern UI, dark mode support, and comprehensive employee management capabilities.",
+      techStack: ["React", "CSS3", "JavaScript", "HTML5"],
+      liveDemo: "https://employee-directory-opal-rho.vercel.app/",
+      github: "https://github.com/jmoanes/employee_directory",
+      image: "/images/directory.jpg"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A productivity app for managing daily tasks with drag-and-drop functionality, due dates, and priority levels.",
-      techStack: ["React", "CSS3", "JavaScript", "React DnD"],
-      liveDemo: "https://example.com",
-      github: "https://github.com/example/taskmanager",
-      image: "📋"
+      title: "Ticket Support System",
+      description: "A Django-based IT Support System that streamlines ticket management, real-time chat, and calendar tracking with a modern Bootstrap 5 design, dark mode, and role-based access for users and IT staff.",
+      techStack: ["Django", "CSS3", "JavaScript", "Python", "HTML5", "PostgreSql"],
+      liveDemo: "https://ticketssupport.onrender.com/login",
+      github: "https://github.com/jmoanes/ticketsSupport",
+      image: "/images/tickets.jpg"
     },
+
     {
       id: 3,
       title: "Weather Dashboard",
       description: "A weather application that displays current weather and forecasts for multiple cities using a weather API.",
       techStack: ["React", "CSS3", "JavaScript", "Weather API"],
-      liveDemo: "https://example.com",
-      github: "https://github.com/example/weather",
-      image: "🌤️"
+      liveDemo: "https://weatherapp-eta-vert.vercel.app/",
+      github: "https://github.com/jmoanes/weatherapp",
+      image: "/images/weatherapp.jpg"
     },
     {
       id: 4,
       title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design.",
+      description: "A personal portfolio website developed in React to test and improve my web development skills, featuring responsive layouts and engaging animations..",
       techStack: ["React", "CSS3", "JavaScript", "React Router"],
-      liveDemo: "https://example.com",
-      github: "https://github.com/example/portfolio",
-      image: "💼"
+      liveDemo: "https://johnjaymoanes-porfolio.vercel.app/",
+      github: "https://github.com/jmoanes/johnjaymoanes-porfolio",
+      image: "/images/portfolio.jpg"
     },
-    {
-      id: 5,
-      title: "Recipe Finder",
-      description: "A web application that helps users discover new recipes based on available ingredients and dietary preferences.",
-      techStack: ["React", "CSS3", "JavaScript", "Recipe API"],
-      liveDemo: "https://example.com",
-      github: "https://github.com/example/recipes",
-      image: "🍳"
-    }
   ];
 
   return (
@@ -71,19 +63,34 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <motion.div 
-              key={project.id} 
+            <motion.div
+              key={project.id}
               className="project-card"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className="project-image">
-                <span className="project-emoji">{project.image}</span>
+                {project.image.startsWith('/') ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-img"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                ) : (
+                  <span className="project-emoji">{project.image}</span>
+                )}
+                <div className="project-emoji" style={{ display: 'none' }}>
+                  <i className="fas fa-image"></i>
+                </div>
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                
+
                 <div className="project-tech">
                   <h4>Tech Stack:</h4>
                   <div className="tech-tags">
@@ -94,18 +101,18 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links">
-                  <a 
-                    href={project.liveDemo} 
-                    target="_blank" 
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
                   >
                     <i className="fas fa-external-link-alt"></i>
                     Live Demo
                   </a>
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
+                  <a
+                    href={project.github}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-secondary"
                   >
