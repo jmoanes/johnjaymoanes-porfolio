@@ -45,7 +45,7 @@ const Resume = () => {
           <h1>Resume</h1>
           <p>My professional experience and skills</p>
           <a 
-            href="/resume.pdf" 
+            href="images/Resume-2025.pdf" 
             download 
             className="btn btn-primary download-btn"
           >
