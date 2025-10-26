@@ -19,8 +19,8 @@ const Projects = () => {
       title: "Employee Directory",
       description: "A professional, responsive Employee Directory web application built with React.js, featuring a modern UI, dark mode support, and comprehensive employee management capabilities.",
       techStack: ["React", "CSS3", "JavaScript", "HTML5"],
-      liveDemo: "https://employee-directory-opal-rho.vercel.app/",
-      github: "https://github.com/jmoanes/employee_directory",
+      liveDemo: "employee-diectory.vercel.app",
+      github: "https://github.com/jmoanes/EMPLOYEE-DIRECTORY",
       image: "/images/directory.jpg"
     },
     {
@@ -51,6 +51,17 @@ const Projects = () => {
       github: "https://github.com/jmoanes/johnjaymoanes-porfolio",
       image: "/images/portfolio.jpg"
     },
+
+    {
+      id: 5,
+      title: "Landing Page Website",
+      description: "Developed a responsive landing page using React, HTML, CSS, and JavaScript featuring a modern UI, smooth navigation, and reusable scalable components designed for easy updates, performance optimization, and future feature expansion",
+      techStack: ["React", "CSS3", "JavaScript", "React Router"],
+      liveDemo: "https://landing-page-rose-delta-75.vercel.app/",
+      github: "https://github.com/jmoanes/landing-page",
+      image: "/images/landing-page-thumbnail.jpg"
+    },
+    
   ];
 
   return (
