@@ -19,7 +19,7 @@ const Projects = () => {
       title: "Employee Directory",
       description: "A professional, responsive Employee Directory web application built with React.js, featuring a modern UI, dark mode support, and comprehensive employee management capabilities.",
       techStack: ["React", "CSS3", "JavaScript", "HTML5"],
-      liveDemo: "employee-diectory.vercel.app",
+      liveDemo: "https://employee-diectory.vercel.app/auth",
       github: "https://github.com/jmoanes/EMPLOYEE-DIRECTORY",
       image: "/images/directory.jpg"
     },
