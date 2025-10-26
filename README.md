@@ -2,7 +2,7 @@
 
 A modern, responsive React portfolio website built with HTML, CSS, and JavaScript. Features smooth animations, form validation, and a clean design.
 
-## 🚀 Features
+##  Features
 
 - **4 Main Pages**: Home, Projects, Contact, and Resume
 - **Responsive Design**: Works perfectly on mobile and desktop
@@ -11,7 +11,7 @@ A modern, responsive React portfolio website built with HTML, CSS, and JavaScrip
 - **Modern UI**: Clean design with hover effects and animations
 - **Reusable Components**: Navbar and Footer used across all pages
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -52,7 +52,7 @@ src/
    npm run build
    ```
 
-## 🎨 Customization
+##  Customization
 
 ### Personal Information
 Update the following files with your information:
@@ -87,14 +87,14 @@ Update the following files with your information:
 1. Place your resume PDF in the `public` folder
 2. Update the download link in `src/pages/Resume.js` to point to your PDF
 
-## 📱 Responsive Design
+##  Responsive Design
 
 The website is fully responsive with breakpoints at:
 - **Desktop**: 1200px and above
 - **Tablet**: 768px - 1199px
 - **Mobile**: Below 768px
 
-## 🎯 Features Breakdown
+##  Features Breakdown
 
 ### Home Page
 - Hero section with introduction
@@ -151,7 +151,7 @@ The contact form is integrated with **EmailJS** for client-side email sending.
 - **Formspree**: For form handling
 - **Netlify Forms**: If deploying to Netlify
 
-## 🚀 Deployment
+##  Deployment
 
 ### Netlify
 1. Build the project: `npm run build`
@@ -172,7 +172,7 @@ The contact form is integrated with **EmailJS** for client-side email sending.
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to fork this project and customize it for your own portfolio. If you make improvements, consider submitting a pull request!
 
